@@ -1,5 +1,5 @@
 # centos-dhcpd
-This image lets you quickly setup a DHCP server based on CentOS 7 and its `dhcp` package.
+This image lets you quickly setup a DHCPv4 server based on CentOS 7 and its `dhcp` package.
 
 ### Building
 Just place the Dockerfile in a folder and run:
