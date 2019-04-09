@@ -7,7 +7,8 @@ MAINTAINER adevur (madavurro@protonmail.com)
 RUN yum clean all -y \
   && yum update -y \
   && yum install -y dhcp \
-  && yum autoremove -y
+  && yum autoremove -y \
+  && yum clean all -y
 
 COPY ./dumb-init_1.2.2_amd64 /usr/local/bin/dumb-init
 
