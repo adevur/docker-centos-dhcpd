@@ -9,7 +9,11 @@ RUN yum clean all -y \
   && yum install -y dhcp \
   && yum autoremove -y
 
-RUN rm -rf /etc/dhcp
+COPY ./dumb-init_1.2.2_amd64 /usr/local/bin/dumb-init
+
+RUN chmod +x /usr/local/bin/dumb-init
+
+ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 
 CMD ["/usr/sbin/dhcpd", \
   "-f", \
